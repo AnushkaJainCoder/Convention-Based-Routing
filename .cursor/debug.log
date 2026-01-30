@@ -1,5 +1,0 @@
-{"sessionId":"debug-session","runId":"initial","hypothesisId":"H4","location":"Program.cs:3","message":"App startup initiated","data":{"args":[]},"timestamp":1768820834961}
-{"sessionId":"debug-session","runId":"initial","hypothesisId":"H3,H4","location":"Program.cs:5","message":"WebApplication builder created","data":{"urls":null,"environment":"Production"},"timestamp":1768820835161}
-{"sessionId":"debug-session","runId":"initial","hypothesisId":"H3,H4","location":"Program.cs:8","message":"WebApplication built, before Run()","data":{"urls":[]},"timestamp":1768820835253}
-{"sessionId":"debug-session","runId":"initial","hypothesisId":"H3,H4","location":"Program.cs:29","message":"About to call app.Run()","data":{"urls":[],"addresses":null},"timestamp":1768820835322}
-{"sessionId":"debug-session","runId":"initial","hypothesisId":"H1,H2,H5","location":"Program.cs:29","message":"app.Run() failed","data":{"errorType":"IOException","errorMessage":"Failed to bind to address http://127.0.0.1:6000: address already in use.","innerError":"Only one usage of each socket address (protocol/network address/port) is normally permitted."},"timestamp":1768820835459}

@@ -4,3 +4,38 @@
 
 <h1>Welcome to MiddlewareApp</h1>
 <p>This is the Home/Index view.</p>
+
+@* razor syntax *@
+<p> current date & time @DateTime.Now </p>
+<p> current year is @DateTime.Now.Year</p>
+
+@{
+    var name = "Anushka Jain";
+    var age = 23;
+}
+
+<p>name is @name and age is @age</p>
+
+@{
+    var myName = "AJ";
+    if(myName == "AJ"){
+        <h3>hello AJ</h3>
+    }
+    else{
+        <h3>bye bro</h3>
+    }
+}
+
+@{
+    for (int i = 0; i < 10; i++){
+        <p>@i</p>
+    }
+}
+
+@{
+    string[] names = {"Anushka", "Aman", "Amit", "Anjali", "Anita"};
+    foreach(var item in names){
+        <p>@item</p>
+    }
+}
+
