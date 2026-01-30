@@ -1,20 +1,16 @@
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
+// builder.Services.AddControllersWithViews();
+
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
-// app.MapDefaultControllerRoute();
-
-// app.MapControllerRoute(
-//     name: "default",
-//     pattern: "{controller=Home}/{action=About}/{id?}"
-// );
-
-
-app.MapControllers();
-
-// app.MapGet("/", () => "Hello World!");
+app.MapControllerRoute(
+   name: "default",
+   pattern: "{controller = Home}/ {action = Index}/ {id?}"
+);
+app.Run();
 
 // app.Use(async(context, next) => {
 //     await context.Response.WriteAsync("Hello from Middleware!");
@@ -26,4 +22,27 @@ app.MapControllers();
 //     await next(context);
 // });
 
-app.Run();
+// delegates
+// app.MapGet("/", () => "hello");
+// app.MapGet("/home", () => "get ");
+// app.MapPost("/home", () => "post");
+// app.MapPut("/home", () => "put");
+// app.MapDelete("/home", () => "delete");
+
+
+// app.UseRouting();
+// app.UseEndpoints(endpoint =>
+// {
+//     endpoint.MapGet("/home", async (context) =>
+//     {
+//        await context.Response.WriteAsync("home page get");
+//     });
+//     endpoint.MapPost("/home", async (context) =>
+//     {
+//        await context.Response.WriteAsync("home page post");
+//     });
+// });
+
+// app.Run(async(HttpContext context) => {
+//    await context.Response.WriteAsync("page not found");
+// } );
