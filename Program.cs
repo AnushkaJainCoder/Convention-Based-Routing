@@ -4,12 +4,20 @@ var builder = WebApplication.CreateBuilder(args);
 // builder.Services.AddControllersWithViews();
 
 builder.Services.AddControllersWithViews();
+// builder.Services.AddAuthentication("Cookies").AddCookie("Cookies", options =>{
+//    options.LoginPath = "/Home/Index";
+//    options.AccessDeniedPath = "/Home/About";
+// });
+// builder.Services.AddAuthorization();
 var app = builder.Build();
+// app.UseAuthentication();
+// app.UseAuthorization();
 
 app.MapControllerRoute(
    name: "default",
-   pattern: "{controller = Home}/ {action = Index}/{id?}"
+   pattern: "{controller=Home}/{action=Index}/{id?}"
 );
+
 app.Run();
 
 // app.Use(async(context, next) => {

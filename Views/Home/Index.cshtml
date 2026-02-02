@@ -1,15 +1,17 @@
 @{
     ViewData["Title"] = "Home";
+    @* ViewData["LayoutType"] = "Admin"; *@
+     @* Layout = "~/Views/Shared/_Layout.cshtml"; *@
 }
 
 <h1>Welcome to MiddlewareApp</h1>
 <p>This is the Home/Index view.</p>
 
 @* razor syntax *@
-<p> current date & time @DateTime.Now </p>
-<p> current year is @DateTime.Now.Year</p>
+@* <p> current date & time @DateTime.Now </p>
+<p> current year is @DateTime.Now.Year</p> *@
 
-@{
+@* @{
     var name = "Anushka Jain";
     var age = 23;
 }
@@ -37,5 +39,5 @@
     foreach(var item in names){
         <p>@item</p>
     }
-}
+} *@
 
