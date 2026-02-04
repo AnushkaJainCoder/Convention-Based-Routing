@@ -7,6 +7,16 @@ namespace MiddlewareApp.Controllers
     {
         public IActionResult Index()
         {
+            // -------------------------------viewdata--------------------------------
+            // ViewData["data1"] = "Anushka From UP";
+            // ViewData["data2"] = 23;
+            // ViewData["data3"] = DateTime.Now.ToLongDateString();
+            // string[] arr = {"Anushka", "Aman", "Amit", "Anjali", "Anita"};
+            // ViewData["data4"] = arr;
+            // ViewData["data5"] = new List<String>{
+            //     "Cricket", "Football", "Hockey", "Tennis", "Basketball"
+            // };
+
            
             return View();
         }
