@@ -6,7 +6,9 @@
 
 <h1>Welcome to MiddlewareApp</h1>
 <p>This is the Home/Index view.</p>
-<h1>@ViewData["data1"]</h1>
+
+@* -----------------------------VIEWDATA-------------------------------- *@
+@* <h1>@ViewData["data1"]</h1>
 <h1>@ViewData["data2"]</h1>
 <h3>@ViewData["data3"]</h3>
 
@@ -18,9 +20,22 @@
     foreach(string item in (List<String>)ViewData["data5"]){
         <p>@item</p>
     }
+ 
+ }    *@
 
-}   
-@* razor syntax *@
+@* ---------------------------------VIEWBAG-------------------------------- *@
+<h2> @ViewBag.data1</h2>
+<h3> @ViewBag.data2</h3>
+<h4> @ViewBag.data3</h4>
+<h5> @ViewBag.data4</h5>
+@{
+    foreach(string item in ViewBag.data4){
+        <p>@item</p>
+    }
+}
+<h6>@ViewBag.data6</h6>
+
+@* ---------------------------------razor syntax --------------------------------- *@
 
 @* <p> current date & time @DateTime.Now </p>
 <p> current year is @DateTime.Now.Year</p> *@

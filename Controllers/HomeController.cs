@@ -17,6 +17,15 @@ namespace MiddlewareApp.Controllers
             //     "Cricket", "Football", "Hockey", "Tennis", "Basketball"
             // };
 
+            ViewBag.data1 = "Anushka From UP";
+            ViewBag.data2 = 21;
+            ViewBag.data3 = DateTime.Now.ToLongDateString();
+            string[] arr = {"Anushka", "Aman", "Amit", "Anjali", "Anita"};
+            ViewBag.data4 = arr;
+            ViewBag.data5 = new List<String>{
+                "Cricket", "Football", "Hockey", "Tennis", "Basketball"
+            };
+            ViewData["data6"] = "AJ";
            
             return View();
         }
