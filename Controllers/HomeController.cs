@@ -17,24 +17,34 @@ namespace MiddlewareApp.Controllers
             //     "Cricket", "Football", "Hockey", "Tennis", "Basketball"
             // };
 
-            ViewBag.data1 = "Anushka From UP";
-            ViewBag.data2 = 21;
-            ViewBag.data3 = DateTime.Now.ToLongDateString();
-            string[] arr = {"Anushka", "Aman", "Amit", "Anjali", "Anita"};
-            ViewBag.data4 = arr;
-            ViewBag.data5 = new List<String>{
-                "Cricket", "Football", "Hockey", "Tennis", "Basketball"
-            };
-            ViewData["data6"] = "AJ";
-           
+
+
+            // -------------------------------viewbag--------------------------------
+            // ViewBag.data1 = "Anushka From UP";
+            // ViewBag.data2 = 21;
+            // ViewBag.data3 = DateTime.Now.ToLongDateString();
+            // string[] arr = {"Anushka", "Aman", "Amit", "Anjali", "Anita"};
+            // ViewBag.data4 = arr;
+            // ViewBag.data5 = new List<String>{
+            //     "Cricket", "Football", "Hockey", "Tennis", "Basketball"
+            // };
+            // ViewData["data6"] = "AJ";
+
+
+            ViewData["data1"] = "ViewData";
+            ViewBag.data2 = "ViewBag";
+            TempData["data3"] = "TempData";
+            TempData.Keep("data3");
+            // return RedirectToAction("About");
             return View();
         }
         public IActionResult About()
         {
-
+            TempData.Keep("data3");
             return View();
         }
-        public IActionResult Contact(){
+        public IActionResult Contact()
+        {
             return View();
         }
 
@@ -54,7 +64,7 @@ namespace MiddlewareApp.Controllers
         // [Route("~/")]
         // [Route("")]
         // [Route("~/Home")]
-        
+
         // [Route("Index")]
         // public IActionResult Index()
         // {

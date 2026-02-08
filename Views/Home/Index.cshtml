@@ -24,7 +24,7 @@
  }    *@
 
 @* ---------------------------------VIEWBAG-------------------------------- *@
-<h2> @ViewBag.data1</h2>
+@* <h2> @ViewBag.data1</h2>
 <h3> @ViewBag.data2</h3>
 <h4> @ViewBag.data3</h4>
 <h5> @ViewBag.data4</h5>
@@ -33,7 +33,24 @@
         <p>@item</p>
     }
 }
-<h6>@ViewBag.data6</h6>
+<h6>@ViewBag.data6</h6> *@
+
+
+
+@* ---------------------------------TEMPDATA-------------------------------- *@
+
+@ViewData["data1"]
+@ViewBag.data2
+@TempData["data3"]
+
+
+
+
+
+
+
+
+
 
 @* ---------------------------------razor syntax --------------------------------- *@
 
